@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Category;
 
 class BookController extends Controller
 {
@@ -27,7 +28,8 @@ class BookController extends Controller
     public function create()
     {
         //
-        return view('Book.create');
+        $categories=Category::all();
+        return view('Book.create',compact('categories'));
     }
 
     /**
@@ -66,8 +68,9 @@ class BookController extends Controller
     public function edit($id)
     {
         //
+        $categories=Category::all();
         $book=Book::find($id);
-        return view('Book.edit',compact('book'));
+        return view('Book.edit',compact('book','categories'));
     }
 
     /**

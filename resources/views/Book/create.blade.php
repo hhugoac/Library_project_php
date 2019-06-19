@@ -40,14 +40,21 @@
 								</div>
 							</div>
 
-							<div class="form-group">
-								<textarea name="category" class="form-control input-sm" placeholder="Select a category"></textarea>
+							<div class="form-group">	
+								<select name="category_id" id="category_id" class="form-control input-sm"
+								>
+								<option value="">--Select a category--</option>
+								@foreach($categories as $category)
+								<option value="{{$category['id']}}">{{$category['name']}}</option>
+								@endforeach
+								</select>
 							</div>
+
 
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="publish_date" id="publish_date" class="form-control input-sm" placeholder="Published date">
+										<input type="date" name="publish_date" id="publish_date" class="form-control input-sm" placeholder="Published date">
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">

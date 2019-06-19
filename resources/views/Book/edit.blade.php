@@ -41,8 +41,17 @@
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="category_id" id="category_id" class="form-control input-sm" value="{{$book->category_id}}">
+					
+
+										<select name="category_id" id="category_id" class="form-control input-sm"
+								>
+								<option value="{{$book->category_id}}">{{$book->category_id}}</option>
+								@foreach($categories as $category)
+								<option value="{{$category['id']}}">{{$category['name']}}</option>
+								@endforeach
+								</select>
 									</div>
+									
 								</div>
 							</div>
 
@@ -50,7 +59,7 @@
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="publish_date" id="publish_date" class="form-control input-sm" value="{{$book->publish_date}}">
+										<input type="date" name="publish_date" id="publish_date" class="form-control input-sm" value="{{$book->publish_date}}">
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
