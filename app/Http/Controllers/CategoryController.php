@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $categories=Category::orderBy('id','DESC')->paginate(3);
+        $categories=Category::orderBy('id','DESC')->paginate(10);
         return view('Category.index',compact('categories')); 
     }
 
@@ -39,7 +39,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate($request,['name'=>'required','description'=>'required','manybooks'=>'required']);
+        $this->validate($request,['id'=>'required','name'=>'required','description'=>'required','manybooks'=>'required']);
         Category::create($request->all());
         return redirect()->route('category.index')->with('success','Category added to the table!');
     }

@@ -30,6 +30,11 @@
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
+										<input type="text" name="id" id="id" class="form-control input-sm" placeholder="Id category">
+									</div>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
 										<input type="text" name="name" id="name" class="form-control input-sm" placeholder="Name of the category">
 									</div>
 								</div>
