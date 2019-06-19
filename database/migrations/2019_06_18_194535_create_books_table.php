@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')
                                 ->on('categories')->onDelete('cascade');
-            $table->integer('publish_date');
+            $table->string('publish_date');
             $table->string('user');
             $table->timestamps();
         });

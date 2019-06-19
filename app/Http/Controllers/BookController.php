@@ -16,7 +16,7 @@ class BookController extends Controller
     {
         //
         $books=Book::orderBy('id','DESC')->paginate(3);
-        return view('Libro.index',compact('books'));
+        return view('Book.index',compact('books'));
     }
 
     /**
@@ -67,7 +67,7 @@ class BookController extends Controller
     {
         //
         $book=Book::find($id);
-        return view('book.edit',compact('book'));
+        return view('Book.edit',compact('book'));
     }
 
     /**
