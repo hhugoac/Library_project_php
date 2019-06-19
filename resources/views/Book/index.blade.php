@@ -29,8 +29,8 @@
               <tr>
                 <td>{{$book->name}}</td>
                 <td>{{$book->author}}</td>
-                <td>{{$book->category}}</td>
-                <td>{{$book->published_date}}</td>
+                <td>{{$book->category_id}}</td>
+                <td>{{$book->publish_date}}</td>
                 <td>{{$book->user}}</td>
                 <td><a class="btn btn-primary btn-xs" href="{{action('BookController@edit', $book->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                 <td>
