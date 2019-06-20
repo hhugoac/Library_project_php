@@ -43,8 +43,8 @@
 									<div class="form-group">
 					
 
-										<select name="category_id" id="category_id" class="form-control input-sm"
-								>
+										<select name="category_id" id="category_id" class="chosen form-control input-sm">
+										
 								<option value="{{$book->category_id}}">{{$book->category_id}}</option>
 								@foreach($categories as $category)
 								<option value="{{$category['id']}}">{{$category['name']}}</option>

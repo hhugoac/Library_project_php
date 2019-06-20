@@ -12,6 +12,8 @@
 */
 Route::resource('book','BookController');
 Route::resource('category','CategoryController');
+
+Route::name('books')->get('/')->uses('BookController@index');
 Route::get('/', function () {
     return view('welcome');
 });
