@@ -57,6 +57,7 @@
 										<input type="date" name="publish_date" id="publish_date" class="form-control input-sm" placeholder="Published date">
 									</div>
 								</div>
+								
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
 										<input type="text" name="user" id="user" class="form-control input-sm" placeholder="User">
